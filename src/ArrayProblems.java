@@ -9,6 +9,11 @@ public class ArrayProblems {
         int[] randonArray = {0, 1, 1, 0, 0, 1, 1, 1, 0, 0};
         randonArray = segregate0and1(randonArray);
 
+        /*
+        int[] randonArray = {3, 2, 1, 9, 0, 5, 4, 7, 6, 8};
+        segregateOddEven(randonArray);
+        */
+
         for (int i = 0; i < randonArray.length; i++) {
             System.out.print(" " + randonArray[i]);
         }
