@@ -2,7 +2,7 @@
  * Class containing all the coding problems related to one dimention array
  *
  * @author ajaydewari
- * @since 10 Oct 2021
+ * @since 11 Oct 2021
  */
 public class ArrayProblems {
     public static void main(String[] args) {
