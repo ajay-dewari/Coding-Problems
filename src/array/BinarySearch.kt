@@ -4,9 +4,14 @@ import jdk.nashorn.internal.objects.Global.println
 
 /**
  * Find the index of a given number n from a given sorted array.
+ * if the number doesn't exit return -1
  * e.g.
  * I/O: n = 7, sortedArray = [2, 4, 5, 7, 9]
  * O/P: 3
+ *
+ * e.g.
+ * I/O: n = 1, sortedArray = [2, 4, 5, 7, 9]
+ * O/P: -1
  */
 val sortedArray = arrayOf(2, 4, 5, 7, 9)
 val sorted = arrayOf(2)
