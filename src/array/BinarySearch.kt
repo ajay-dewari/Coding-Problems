@@ -1,7 +1,5 @@
 package array
 
-import jdk.nashorn.internal.objects.Global.println
-
 /**
  * Find the index of a given number n from a given sorted array.
  * if the number doesn't exit return -1
@@ -29,7 +27,7 @@ fun findGivenNumber(array: Array<Int>, n: Int): Int {
         if (n == array[mid]) {
             return mid
         }
-        if (array[mid] < n) {
+        if (n > array[mid]) {
             start = mid + 1
         } else {
             end = mid - 1
