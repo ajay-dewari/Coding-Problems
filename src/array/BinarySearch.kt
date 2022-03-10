@@ -14,11 +14,11 @@ package array
 val sortedArray = arrayOf(2, 4, 5, 7, 9)
 val sorted = arrayOf(2)
 fun main() {
-    println(findGivenNumber(sortedArray, 7))
-    println(binarySearch(sorted, 0, sorted.size - 1, 2))
+    println(binarySearchIterative(sortedArray, 7))
+    println(binarySearchRecursive(sorted, 0, sorted.size - 1, 2))
 }
 
-fun findGivenNumber(array: Array<Int>, n: Int): Int {
+fun binarySearchIterative(array: Array<Int>, n: Int): Int {
     var start = 0
     var end = array.size - 1
 
@@ -37,7 +37,7 @@ fun findGivenNumber(array: Array<Int>, n: Int): Int {
 }
 
 //issue with the recursive approach is if any condition or logic break we get stackoverflow exception
-fun binarySearch(array: Array<Int>, start: Int, end: Int, n: Int): Int {
+fun binarySearchRecursive(array: Array<Int>, start: Int, end: Int, n: Int): Int {
     val mid = start + (end - start) / 2
     if (array[mid] == n) {
         return mid
@@ -47,9 +47,9 @@ fun binarySearch(array: Array<Int>, start: Int, end: Int, n: Int): Int {
     }
 
     return if (n > array[mid]) {
-        binarySearch(array, end, mid + 1, n)
+        binarySearchRecursive(array, end, mid + 1, n)
     } else {
-        binarySearch(array, mid - 1, start, n)
+        binarySearchRecursive(array, mid - 1, start, n)
     }
 
 }
