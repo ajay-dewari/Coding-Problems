@@ -1,4 +1,4 @@
-package java;
+package greedy;
 
 import java.util.Arrays;
 
@@ -36,20 +36,20 @@ import java.util.Arrays;
  *
  *
  * */
-public class CoinChange {
+public class MinCoinChange {
 
-    private static void main(String[] args) {
-
-        System.out.print(12/7);
+    public static void main(String[] args) {
+        int[] denominationArray = new int[]{1, 2, 5};
+        System.out.print(coinChange(denominationArray, 11));
     }
 
     //Greedy Approach
     public static int coinChange(int[] coins, int amount) {
         int changeSum = 0;
-        int change = 0;
+        int change;
         int position = coins.length - 1;
         Arrays.sort(coins);
-        while(amount > 0) {
+        while (amount > 0) {
             if (amount >= coins[position]) {
                 change = amount / coins[position];
                 amount = amount % coins[position];
