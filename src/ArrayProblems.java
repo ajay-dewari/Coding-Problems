@@ -43,6 +43,24 @@ public class ArrayProblems {
         return randonArray;
     }
 
+    int[] separate0and1(int[] array) {
+        int i = 0;
+        int j = array.length - 1;
+        while (i < j) {
+            if (array[i] == 0) {
+                i++;
+            } else {
+                if (array[j] == 0) {
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+                j--;
+            }
+        }
+        return array;
+    }
+
 
     private static int[] segregateOddEven(int[] array) {
         int[] randonArray = {3, 2, 1, 9, 0, 5, 4, 7, 6, 8};
