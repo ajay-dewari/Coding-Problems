@@ -61,7 +61,6 @@ public class ArrayProblems {
         return array;
     }
 
-
     private static int[] segregateOddEven(int[] array) {
         int[] randonArray = {3, 2, 1, 9, 0, 5, 4, 7, 6, 8};
         int j = -1;
