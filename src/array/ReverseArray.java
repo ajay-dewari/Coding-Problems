@@ -1,5 +1,17 @@
 package array;
 
+/**
+ * Write a program to reverse an array or string
+ * <p>
+ * Input  : arr[] = {1, 2, 3}
+ * Output : arr[] = {3, 2, 1}
+ * <p>
+ * Input :  arr[] = {4, 5, 1, 2}
+ * Output : arr[] = {2, 1, 5, 4}
+ *
+ * @author ajaydewari
+ * @since 23rd April 2023
+ */
 public class ReverseArray {
 
     public static void main(String[] args) {
@@ -10,12 +22,12 @@ public class ReverseArray {
         }
     }
 
-    private static int[]  reverseArray(int[]  array) {
-        int lastIndex = array.length -1;
-        for (int i = 0; i < lastIndex/2; i++) {
+    private static int[] reverseArray(int[] array) {
+        int lastIndex = array.length - 1;
+        for (int i = 0; i < lastIndex / 2; i++) {
             int temp = array[i];
-            array[i] = array[lastIndex-i];
-            array[lastIndex-i] = temp;
+            array[i] = array[lastIndex - i];
+            array[lastIndex - i] = temp;
         }
         return array;
     }
