@@ -31,5 +31,12 @@ public class ReverseArray {
         }
         return array;
     }
-
+    private static int[] reverse(int[] array, int start, int end) {
+        while (start < end) {
+            int temp = array[start];
+            array[start] = array[end];
+            array[end] = temp;
+        }
+        return array;
+    }
 }
