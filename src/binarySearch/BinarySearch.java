@@ -51,6 +51,21 @@ public class BinarySearch {
         }
         return -1;
     }
+
+    public int recursiveSearch(int[] nums, int target, int start, int end) {
+        int mid = (end - start)/2 + start;
+        if (start > end) {
+            return -1;
+        } else if (nums[mid] == target) {
+            return mid;
+        } else if(target > nums[mid]) {
+            return recursiveSearch(nums, target, mid+1, end);
+        } else if (target < nums[mid]) {
+            return recursiveSearch(nums, target, start, end-1);
+        } else {
+            return -1;
+        }
+    }
 }
 
 
