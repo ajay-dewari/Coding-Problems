@@ -1,5 +1,7 @@
+package common;
+
 /**
- * Class containing all the coding problems related to one dimention array
+ * Class containing all the coding problems related to one dimention common.array
  *
  * @author ajaydewari
  * @since 11 Oct 2021

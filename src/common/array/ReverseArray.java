@@ -1,7 +1,7 @@
-package array;
+package common.array;
 
 /**
- * Write a program to reverse an array or string
+ * Write a program to reverse an common.array or string
  * <p>
  * Input  : arr[] = {1, 2, 3}
  * Output : arr[] = {3, 2, 1}
@@ -36,6 +36,8 @@ public class ReverseArray {
             int temp = array[start];
             array[start] = array[end];
             array[end] = temp;
+            start++;
+            end--;
         }
         return array;
     }

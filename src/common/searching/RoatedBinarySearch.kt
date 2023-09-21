@@ -1,8 +1,8 @@
-package searching
+package common.searching
 
 /**
- * Find the index of a given number n in a given sorted array which is rotated.
- * In case the given number n is not available in the given array return -1
+ * Find the index of a given number n in a given sorted common.array which is rotated.
+ * In case the given number n is not available in the given common.array return -1
  *
  * I/P: [7, 9, 2, 4, 5], 7
  * O/P: 0
@@ -45,7 +45,7 @@ fun findIndexInRotatedSortedArray(array: Array<Int>, n: Int): Int {
             }
         }
 
-        /*if (array[mid] > n) {
+        /*if (common.array[mid] > n) {
             endIndex = mid - 1
         } else {
             startIndex = mid + 1

@@ -1,4 +1,4 @@
-package array_manipulation
+package common.array_manipulation
 
 fun segregateOddEven(array: Array<Int>) {
     var i = 0;
