@@ -31,16 +31,17 @@ public class SingleElementInSortedArray {
     }
 
     public static int singleNonDuplicate(int[] nums) {
-        int left = 0, right = nums.length - 1;
-        while (left < right) {
-            int mid = (left + right) / 2;
+        int start = 0;
+        int end = nums.length - 1;
+        while (start < end) {
+            int mid = (end - start) / 2 + start;
             if ((mid % 2 == 0 && nums[mid] == nums[mid + 1])
                     || (mid % 2 == 1 && nums[mid] == nums[mid - 1])) {
-                left = mid + 1;
+                start = mid + 1;
             } else {
-                right = mid;
+                end = mid;
             }
         }
-        return nums[left];
+        return nums[start];
     }
 }
