@@ -60,4 +60,40 @@ public class ReverseLinkedList {
             this.next = next;
         }
     }
+
+    /**
+     * Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list.
+     * <p>
+     * Input
+     * head =
+     * [1,2,3,4,5]
+     * k = 3
+     * Output
+     * [3,2,1,4,5]
+     * <p>
+     * Input
+     * head =
+     * [1,2,3,4,5]
+     * k =
+     * 2
+     * Output
+     * [2,1,4,3,5]
+     **/
+    public ListNode reverseKGroup(ListNode head, int k) {
+        ListNode prev = null;
+        ListNode current = head;
+        ListNode next = null;
+        int count = 0;
+        while (current != null && count < k) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+            count++;
+        }
+        if (next != null) {
+            head.next = reverseKGroup(next, k);
+        }
+        return prev;
+    }
 }
