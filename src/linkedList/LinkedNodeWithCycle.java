@@ -37,7 +37,7 @@ package linkedList;
  * -105 <= Node.val <= 105
  * pos is -1 or a valid index in the linked-list.
  **/
-public class LinkedListCycle {
+public class LinkedNodeWithCycle {
 
     public static void main(String[] args) {
 
