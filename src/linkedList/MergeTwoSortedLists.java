@@ -44,6 +44,5 @@ public class MergeTwoSortedLists {
         }
         current.next = list1 != null ? list1 : list2;
         return sortedNode.next;
-
     }
 }
