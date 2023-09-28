@@ -32,6 +32,7 @@ package linkedList;
  * <p>
  * Solution Explanation
  * https://www.youtube.com/watch?v=rEYm4yLHSHQ
+ * https://www.youtube.com/watch?v=xRYPjDMSUFw
  */
 public class ReorderList {
     public void reorderList(ListNode head) {
