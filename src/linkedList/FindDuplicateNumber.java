@@ -33,6 +33,8 @@ package linkedList;
  * <p>
  * How can we prove that at least one duplicate number must exist in nums?
  * Can you solve the problem in linear runtime complexity?
+ *
+ * Solution Explanation: {@link <a href="https://www.youtube.com/watch?v=32Ll35mhWg0">...</a>}
  **/
 public class FindDuplicateNumber {
     public int findDuplicate(int[] nums) {
