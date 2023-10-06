@@ -1,10 +1,6 @@
-package design;
+package common.design;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
 
 class MyHashMap {
 
@@ -12,8 +8,8 @@ class MyHashMap {
      * Initialize your data structure here.
      */
     LinkedList<Entry>[] map;
-    Set<Integer> set = new HashSet<>();
-    List<Integer> list = new ArrayList<>();
+/*    Set<Integer> set = new HashSet<>();
+    List<Integer> list = new ArrayList<>();*/
     public static int SIZE = 769;
 
     public MyHashMap() {

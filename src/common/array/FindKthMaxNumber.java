@@ -1,9 +1,9 @@
-package array;
+package common.array;
 
 import java.util.PriorityQueue;
 
 /**
- * Maximum and minimum of an array using minimum number of comparisons
+ * Maximum and minimum of an common.array using minimum number of comparisons
  *
  * @author ajaydewari
  * @since 24th April 2023

@@ -1,4 +1,4 @@
-package two_pointer;
+package common.two_pointer;
 
 
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * 349. Intersection of Two Arrays
  * <p>
- * Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.
+ * Given two integer arrays nums1 and nums2, return an common.array of their intersection. Each element in the result must be unique and you may return the result in any order.
  * <p>
  * Example 1:
  * <p>

@@ -1,4 +1,4 @@
-package array_manipulation
+package common.array_manipulation
 
 fun main() {
     println(separate0and1(arrayOf(1, 0, 1, 0, 1, 0)).contentToString())
