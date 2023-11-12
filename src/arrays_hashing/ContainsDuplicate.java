@@ -28,7 +28,12 @@ import java.util.Set;
  * -109 <= nums[i] <= 109
  **/
 public class ContainsDuplicate {
-    public boolean containsDuplicate(int[] nums) {
+    public static void main(String[] args) {
+        int[] array = {2, 4, 6, 8, 9, 2};
+        System.out.print(containsDuplicate(array));
+    }
+
+    public static boolean containsDuplicate(int[] nums) {
         Set<Integer> uniques = new HashSet<>();
         for (int num : nums) {
             if (uniques.contains(num)) {
