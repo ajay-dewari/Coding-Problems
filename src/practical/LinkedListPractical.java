@@ -1,3 +1,5 @@
+package practical;
+
 import linkedList.ListNode;
 
 import java.util.List;
@@ -78,12 +80,33 @@ public class LinkedListPractical {
         return sortedList.next;
     }
 
-    private ListNode mergeSortedNLinkedList(List<ListNode> list) {
+    private ListNode mergeKSortedNLinkedList(List<ListNode> list) {
         ListNode firstlist = list.get(0);
-        for(int i = 1; i <list.size(); i++) {
+        for (int i = 1; i < list.size(); i++) {
             firstlist = mergeSortedLinkedList(firstlist, list.get(i));
         }
         return firstlist;
+    }
+
+    private ListNode sortList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode temp = head;
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null ) {
+            temp = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        temp.next = null;
+        ListNode leftSide = sortList(head);
+        ListNode rightSide = sortList(slow);
+        return mergeSortedLinkedList(leftSide, rightSide);
     }
 }
 

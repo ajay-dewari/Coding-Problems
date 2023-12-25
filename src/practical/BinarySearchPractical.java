@@ -1,3 +1,5 @@
+package practical;
+
 public class BinarySearchPractical {
 
     private int searchTarget(int[] array, int target) {
