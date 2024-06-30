@@ -1,8 +1,6 @@
 package miscellaneous.arrays_hashing;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
 /**
  * 217. {@link <a href="https://leetcode.com/problems/top-k-frequent-elements/">Top K Frequent Elements</a>}
@@ -33,23 +31,32 @@ import java.util.PriorityQueue;
  **/
 
 public class TopKFrequentElements {
-    public int[] topKFrequent(int[] nums, int k) {
-        int[] arr = new int[k];
-        Map<Integer, Integer> countMap = new HashMap<Integer, Integer>();
-        for (int num : nums) {
-            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+    public static void main(String[] args) {
+        int[] input = {1, 2, 2, 3, 3, 3};
+        int k = 2;
+        // int[] input = {7, 7};
+        // int k = 1;
+        System.out.print(Arrays.toString(topKFrequent(input, k)));
+    }
+
+    public static int[] topKFrequent(int[] inputArray, int k) {
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        Queue<Map.Entry<Integer, Integer>> frequencyQueue = new PriorityQueue<>((a, b) -> a.getValue() - b.getValue());
+        int[] outputArray = new int[k];
+        int outputArrayIndex = k;
+        for (int n : inputArray) {
+            frequencyMap.put(n, frequencyMap.getOrDefault(n, 0) + 1);
         }
-        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>(
-                (a, b) -> a.getValue() - b.getValue()
-        );
-        for (Map.Entry<Integer, Integer> it : countMap.entrySet()) {
-            pq.add(it);
-            if (pq.size() > k) pq.poll();
+
+        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+            frequencyQueue.add(entry);
+            if (frequencyQueue.size() > k) frequencyQueue.poll();
         }
-        int i = k;
-        while (!pq.isEmpty()) {
-            arr[--i] = pq.poll().getKey();
+
+        while (!frequencyQueue.isEmpty()) {
+            outputArray[--outputArrayIndex] = frequencyQueue.poll().getKey();
         }
-        return arr;
+
+        return outputArray;
     }
 }
