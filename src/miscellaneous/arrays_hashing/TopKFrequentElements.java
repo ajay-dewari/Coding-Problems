@@ -54,7 +54,7 @@ public class TopKFrequentElements {
         }
 
         while (!frequencyQueue.isEmpty()) {
-            outputArray[--outputArrayIndex] = frequencyQueue.poll().getValue();
+            outputArray[--outputArrayIndex] = frequencyQueue.poll().getKey();
         }
 
         return outputArray;
