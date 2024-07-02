@@ -76,7 +76,7 @@ public class ValidSudoku {
             for (int j = 0; j < size; j++) {
                 char ch = input[i][j];
                 if (ch != '.' && (
-                                !sudoku.add(ch + " found at coloumn " + i) ||
+                                !sudoku.add(ch + " found at column " + i) ||
                                 !sudoku.add(ch + " found at row " + j) ||
                                 !sudoku.add(ch + " found at matrix " + i/3 + "-" + j/3)
                 )) {
